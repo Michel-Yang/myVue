@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-// import { mapMutations } from 'vuex'
+
 export default {
   name: 'home',
   data () {
@@ -12,6 +12,8 @@ export default {
     }
   },
   methods: {
+  },
+  components:{
   }
 }
 

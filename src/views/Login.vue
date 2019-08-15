@@ -21,6 +21,7 @@ export default {
     ...mapMutations(['increment']),
     login: function( ) {
       this.$store.commit('increment', this.userInfo)
+      localStorage.setItem('userInfo',this.userInfo)
       this.$router.push('/')
     }
   }
