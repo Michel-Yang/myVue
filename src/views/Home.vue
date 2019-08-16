@@ -1,28 +1,31 @@
 <template>
   <div class='home'>
     <img alt='Vue logo' src='../assets/images/my.jpg' class='headpic'/>
+    <p class="name">杨福伟</p>
+    <p class="project" @click="project">项目列表</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import { mapMutations } from 'vuex';
 
 export default {
   name: 'home',
   mounted () {
-   
     var userInfo=localStorage.getItem("userInfo")
     if(JSON.stringify(userInfo)!="{}"){
        this.$store.commit('increment',userInfo)
     }else{
        this.$router.push('/login')
     }
-   // console.log(JSON.stringify(this.$store.state.useInfo) )
   },
   methods:{
     ...mapMutations(['increment']),
+    project:function(){
+      console.log(111)
+      this.$router.push('/list')
+    }
   },
   components: {
   }
@@ -34,6 +37,16 @@ export default {
   width:120px;
   height:120px;
   border-radius: 50%;
+}
+.home .name{
+  font-size: 20px;
+   margin: 20px 0;
+}
+.home .project{
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  color:lightskyblue;
+
 }
 
 </style>
