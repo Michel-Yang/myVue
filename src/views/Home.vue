@@ -8,7 +8,7 @@
 
 <script>
 /* import HelloWorld from '@/components/HelloWorld.vue' */
-import login from '@/api/api.js'
+import apis from '@/api/api.js'
 import { mapMutations } from 'vuex'
 
 export default {
@@ -20,7 +20,8 @@ export default {
     } else {
       this.$router.push('/login')
     }
-    login.login().then(
+    console.log(apis)
+    apis.login({ name: '杨福伟' }).then(
       sucess => {
         console.log(sucess)
       },

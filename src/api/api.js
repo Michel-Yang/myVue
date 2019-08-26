@@ -1,8 +1,8 @@
 import service from '@/utils/request'
 
-export default {
+const apis = {
   // 登录
-  login (data) {
+  login: function (data) {
     return service({
       url: '/login',
       method: 'post',
@@ -10,3 +10,5 @@ export default {
     })
   }
 }
+
+export default apis
