@@ -2,11 +2,16 @@ import service from '@/utils/request'
 
 const apis = {
   // 登录
-  login: function (data) {
+  login: function () {
     return service({
-      url: '/login',
-      method: 'post',
-      data
+      url: '',
+      method: 'get'
+    })
+  },
+  getMes: function () {
+    return service({
+      url: '/user',
+      method: 'get'
     })
   }
 }

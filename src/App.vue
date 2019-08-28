@@ -17,15 +17,14 @@ export default {
 
     }
   },
+  mounted () {
+    console.log(process.env)
+  },
   components: {
     TabBar
   }
-  
 }
 </script>
-
-
-
 <style lang="less">
 body{
   margin:0px;

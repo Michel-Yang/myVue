@@ -20,8 +20,8 @@ export default {
     } else {
       this.$router.push('/login')
     }
-    console.log(apis)
-    apis.login({ name: '杨福伟' }).then(
+    //console.log(apis)
+    apis.login( ).then(
       sucess => {
         console.log(sucess)
       },
