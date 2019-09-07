@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import List from './views/List.vue'
+import Flexbox from './views/Flexbox.vue'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/list',
       name: 'list',
       component: List
+    },
+    {
+      path: '/flexbox',
+      name: 'list',
+      component: Flexbox
     },
     {
       path: '/about',
