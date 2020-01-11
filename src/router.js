@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import List from './views/List.vue'
 import Flexbox from './views/Flexbox.vue'
+import key from './views/Key.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/flexbox',
       name: 'list',
       component: Flexbox
+    },
+    {
+      path: '/key',
+      name: 'key',
+      component: key
     },
     {
       path: '/about',
